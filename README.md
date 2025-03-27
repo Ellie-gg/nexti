@@ -14,15 +14,25 @@ Registro de um domínio na conta aws. Pelo route53, foi criado na minha conta pe
 Instruções
 
   **Variáveis:** Revise o arquivo variables.tf e altere as variáveis conforme seu ambiente.
+  
   **PROTEJA A SENHA DO DB:** Crie `terraform.tfvars` com `db_password = "..."`.
+  
   **Inicialize:** `terraform init -reconfigure`
+  
   **Selecione/Crie o Workspace:** `terraform workspace select dev || terraform workspace new dev`
+  
   **Valide e Formate:** `terraform fmt -recursive && terraform validate`
+ 
   **Planeje:** `terraform plan`
+ 
  **Aplique:** `terraform apply` (Confirme com `yes`)
+ 
  **Confirme Assinaturas SNS:** Verifique o e-mail `eliel.garcia@gmail.com`.
+ 
  **DELEGAÇÃO DNS:** Use os valores do output `route53_name_servers` para atualizar os NS do seu domínio `elielnexti.click`. (Alterar no arquivo de variaveis para seu domínio)
+ 
  **Acesse:** Após a propagação do DNS, acesse `http://dev-app.elielnexti.click`.
+
 
 ## Destruindo
 
