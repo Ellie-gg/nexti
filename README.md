@@ -29,4 +29,23 @@ Instruções
 
 terraform destroy
 
+Sugestões de Melhorias Futuras:
+
+Gerenciar secrets com AWS Secrets Manager.
+Refinar políticas IAM para seguir o princípio de menor privilégio.
+Restringir regras de saída (egress) nos Security Groups e Network ACLs.
+Implementar HTTPS no Load Balancer com certificado.
+
+Criar mais módulos Terraform IAM separados.
+Adicionar blocos validation às variáveis de entrada.
+Integrar terraform fmt, tflint, checkov/tfsec em CI/CD.
+
+Implementar testes de integração com Terratest em um ambiente dedicado.
+Adicionar testes end-to-end que validem a aplicação na infraestrutura provisionada.
+Usar ferramentas como Infracost para análise de custos no planejamento.
+
+Melhorar a configuração do CloudWatch Agent para logs de aplicação.
+Instrumentar o código da aplicação para enviar dados ao X-Ray.
+Implementar a lógica real de parsing e resumo na Função Lambda.
+Criar alarme de tamanho do bucket S3
 
